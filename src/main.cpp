@@ -32,7 +32,7 @@ int main(int argc, char *argv[])
 
     ros::init(argc, argv, "mapper");
     ros::NodeHandle n;
-    ros::Subscriber sub = n.subscribe("gps", 1000, plotLocation);
+    ros::Subscriber sub = n.subscribe("/fix", 1000, plotLocation);
 
     QThread* thread = new QThread;
     Worker* worker = new Worker();

@@ -28,7 +28,7 @@ private:
     Ui::MainWindow *ui;
 
 public slots:
-    void updateGPS(float lt, float lg);
+    void updateGPS(double lt, double lg);
 };
 
 #endif // MAINWINDOW_H

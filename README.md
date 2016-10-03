@@ -1,6 +1,10 @@
 # FunRobo-GPSViewer
 
-GPS Visualization Package for ENGR3390 : Fundamentals of Robotics Class at Olin College
+![Demo](images/demo.png)
+
+[Youtube Link](https://youtu.be/bQEJf5G_3pw)
+
+GPS Visualization Package for ENGR3390 : Fundamentals of Robotics Class at Olin College.
 
 ## Usage
 
