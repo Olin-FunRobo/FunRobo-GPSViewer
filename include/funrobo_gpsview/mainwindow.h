@@ -3,6 +3,10 @@
 
 #include <QMainWindow>
 #include <QGraphicsScene>
+#include <QGraphicsEllipseItem>
+
+#include <QPen>
+#include <QBrush>
 
 namespace Ui {
 class MainWindow;
@@ -13,6 +17,9 @@ class MainWindow : public QMainWindow
     Q_OBJECT
 private:
     QGraphicsScene m_graphicsScene;
+    QPen gpsPen;
+    QBrush gpsBrush;
+    QGraphicsEllipseItem* gpsPointer;
 public:
     explicit MainWindow(QWidget *parent = 0, QString image_path="");
     ~MainWindow();

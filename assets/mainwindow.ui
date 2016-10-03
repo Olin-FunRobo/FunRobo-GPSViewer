@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>724</width>
-    <height>538</height>
+    <width>842</width>
+    <height>625</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,7 +17,7 @@
    <widget class="QGroupBox" name="status_groupbox">
     <property name="geometry">
      <rect>
-      <x>520</x>
+      <x>560</x>
       <y>10</y>
       <width>171</width>
       <height>131</height>
@@ -42,12 +42,12 @@
       <property name="orientation">
        <enum>Qt::Horizontal</enum>
       </property>
-      <widget class="QLabel" name="label">
+      <widget class="QLabel" name="lat_lab">
        <property name="text">
         <string>Latitude:</string>
        </property>
       </widget>
-      <widget class="QLabel" name="label_2">
+      <widget class="QLabel" name="lat_val">
        <property name="text">
         <string>N/A</string>
        </property>
@@ -57,12 +57,12 @@
       <property name="orientation">
        <enum>Qt::Horizontal</enum>
       </property>
-      <widget class="QLabel" name="lat_label">
+      <widget class="QLabel" name="long_lab">
        <property name="text">
         <string>Longitude:</string>
        </property>
       </widget>
-      <widget class="QLabel" name="long_label">
+      <widget class="QLabel" name="long_val">
        <property name="text">
         <string>N/A</string>
        </property>
@@ -75,8 +75,8 @@
      <rect>
       <x>20</x>
       <y>10</y>
-      <width>461</width>
-      <height>441</height>
+      <width>521</width>
+      <height>531</height>
      </rect>
     </property>
     <property name="orientation">
@@ -95,7 +95,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>724</width>
+     <width>842</width>
      <height>20</height>
     </rect>
    </property>
