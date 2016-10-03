@@ -46,7 +46,7 @@ void MainWindow::updateGPS(double lt, double lg){
     //img = (height x width) 487 x 496
 	//
 	float x = (lg - LG_MIN)/(LG_MAX - LG_MIN); // normalize
-    float y = (lt - LT_MIN)/(LT_MAX - LT_MIN); // normalize
+    float y = (lt - LT_MAX)/(LT_MIN - LT_MAX); // normalize
 
     x *= WIDTH;
     y *= HEIGHT;
