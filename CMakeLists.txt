@@ -17,13 +17,19 @@ find_package(catkin REQUIRED COMPONENTS
 find_package(Qt5Widgets REQUIRED)
 find_package(Qt5Core REQUIRED)
 
-set (gpsview_lib_src src/mainwindow.cpp)
+set (gpsview_lib_src src/mainwindow.cpp src/Worker.cpp)
 set (gpsview_lib_ui assets/mainwindow.ui)
 set (gpsview_bin_src src/main.cpp)
 set (gpsview_lib_hdr include/funrobo_gpsview/mainwindow.h)
+set (worker_hdr include/funrobo_gpsview/Worker.h)
+
+set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
 qt5_wrap_ui(gpsview_lib_ui_moc ${gpsview_lib_ui})
 qt5_wrap_cpp(gpsview_lib_hdr_moc ${gpsview_lib_hdr})
+qt5_wrap_cpp(worker_moc ${worker_hdr})
+
+MESSAGE(STATUS "MOCFILE : " ${worker_moc})
 
 ## hack to get headers to appear on file editor (really stupid...)
 FILE(GLOB_RECURSE LibFiles "include/*.h")
@@ -150,15 +156,17 @@ add_library(gpsview_lib SHARED
         ${gpsview_lib_src}
         ${gpsview_lib_ui_moc}
 	${gpsview_lib_hdr_moc}
+        ${worker_moc}
 )
 
 target_link_libraries(gpsview_lib
+    ${catkin_LIBRARIES}
     Qt5::Widgets
     )
 
 add_executable(gpsview
 	${gpsview_bin_src}
-	)
+        )
 
 target_link_libraries(gpsview
 	${catkin_LIBRARIES}
