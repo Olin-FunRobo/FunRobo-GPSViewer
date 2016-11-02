@@ -9,7 +9,14 @@ GPS Visualization Package for ENGR3390 : Fundamentals of Robotics Class at Olin 
 ## Usage
 
 Building this package requires the installation of Qt5.
-At this point, it has only been tested with [Qt 5.7](https://www.qt.io/qt5-7/).
+At this point, it has been tested with [Qt 5.7](https://www.qt.io/qt5-7/).
+and also the QT5 version distributed via package manager (apt-get).
+
+## Install Dependencies:
+
+``` bash
+sudo apt-get install qtbase5-dev
+```
 
 ```bash
 rosrun funrobo_gpsview gpsview
